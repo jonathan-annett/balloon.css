@@ -12,7 +12,7 @@ var
  
  path = require('path'),
  css_min_path=require.resolve('balloon-css'),
- base_path = path.basedir(css_min_path),
+ base_path = path.dirname(css_min_path),
  css_path = path.join(base_path,"balloon.css");
  module.exports = function(app){
   app.get ("/balloon.css",function(req,res){
